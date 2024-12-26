@@ -50,8 +50,8 @@ const Navbar = () => {
     
   return (
  
-        <nav id="navbar" className=" top-0 left-0 right-0 z-10 fixed bg-transparent dark:bg-gray-800  transition duration-300">
-          <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+        <nav id="navbar" className=" top-0 left-0 right-0 z-10  mt-0 fixed bg-transparent dark:bg-gray-800  transition duration-300">
+          <div className="container px-6 mx-auto md:flex md:justify-between md:items-center">
             <div className="flex items-center justify-between">
             <div className="flex items-center gap-0">
         {/* Logo */}
@@ -59,11 +59,11 @@ const Navbar = () => {
           src="/logo.png" // Path to the logo in the `public` folder
           alt="Sourov Agro Logo"
           width={90} // Adjust width
-          height={40} // Adjust height
+          height={30} // Adjust height
         
         />
            <div className="flex flex-col items-start"> 
-            <a href="#" className=" pacifico-regular   md:text-3xl text-2xl text-black font-extrabold flex">
+            <a href="#" className="   md:text-3xl text-2xl text-black font-extrabold flex">
            
             {/* Wrap each letter in a span */}
             {["S","o","u","r","o","v","A","g","r","o"].map((letter, index) => (
@@ -73,7 +73,7 @@ const Navbar = () => {
             ))}
           
           </a>
-          <span className="text-sm font-medium justify-center text-center">Dairy farm</span></div>
+          <span className="text-[12px] w-[100%]  tracking-[9px] text-[#000000e0] text-center">Dairy & Poultry</span></div>
           </div>
               {/* Mobile menu button */}
               <div className="flex lg:hidden">
