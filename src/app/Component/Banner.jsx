@@ -34,57 +34,77 @@ const Banner = () => {
       { x: 300, opacity: 0 }, // Start off-screen to the left
       { x: 0, opacity: 1, duration: 1, ease: "power2.out" } // Animate to visible position
     );
+    timeline.fromTo(
+      ".card-2",
+      { x: 300, opacity: 0 }, // Start off-screen to the left
+      { x: 0, opacity: 1, duration: 1,delay:0.2, ease: "power2.out" } // Animate to visible position
+    );
+    timeline.fromTo(
+      ".card-3",
+      { x: 300, opacity: 0 }, // Start off-screen to the left
+      { x: 0, opacity: 1, duration: 1,delay:0.2,  ease: "power2.out" } // Animate to visible position
+    );
+
   
     timeline
-      .fromTo(
-        ".layer-4",
-        { opacity: 0, y: -200 },
-        { opacity: 1, y: 0, duration: 0.8 }
-      ) // Bottom Bun
-      .fromTo(
-        ".layer-3",
-        { opacity: 0, y: -200 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        "-=0.5"
-      ) // Patty
-      .fromTo(
-        ".layer-2",
-        { opacity: 0, y: -200 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        "-=0.5"
-      ) // Lettuce
-      .fromTo(
-        ".layer-1",
-        { opacity: 0, y: -200 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        "-=0.5"
-      ) // Top Bun
-      .fromTo(
-        ".seal",
-        { opacity: 0, y: -200 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        "-=0.5"
-      ) // Top Bun
- 
-
-
-      .to(".burger-container", { y: 20, repeat: -1, yoyo: true, duration: 1 }); // Floating effect
+    .to(".burger-container", { y: 20, repeat: -1, yoyo: true, duration: 1 }); // Floating effect
 
 
   }, []);
 
+    useEffect(() => {
+      // GSAP Animation for the Cheese Slice
+      gsap.fromTo(
+        ".cheese-slice",
+        { y: -200, opacity: 0 }, // Start above the view with 0 opacity
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay:1,
+          ease: "power2.out",
+        }
+       
+      );
+      gsap.fromTo(
+        ".slash-2",
+        { scale: 0, opacity: 0 }, // Start with no size and hidden
+        {
+          scale: 1, // Zoom to full size
+          opacity: 1, // Make it visible
+          duration: 1,
+          delay:1.1, // Delay to make it appear after the cheese slice animation
+          ease: "power2.out",
+        }
+       
+      );
+     
+  
+  
+      // GSAP Animation for the Slash (Zoom Effect)
+      gsap.fromTo(
+        ".slash",
+        { y: -200, opacity: 0 }, // Start above the view with 0 opacity
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+        }
+      );
+    }, []);
   return (
-    <div className="relative bg-[#FB9300] border-white border">
+    <div className="relative bg-black ">
       {/* Banner Section with Yellow Background */}
       <div className=" h-[600px] md:h-[600px] flex flex-col-reverse md:flex-row justify-between items-start">
         {/* Content Section */}
-        <div className="content w-full text-center md:text-left md:w-1/2 px-6 md:mt-32 mt-5">
+        <div className="content w-full text-center md:text-left md:w-1/2 px-6 md:mt-36 mt-5">
 
 
-  <h1 className="text-2xl w-full md:text-6xl font-bold text-black dark:text-gray-100">
-  <span className="text-[#FFFFFF] md:mb-3  "> 
-  Delivering Premium Dairy Excellence to Restaurants </span><br />
-    
+  <h1 className="text-2xl w-full md:text-5xl font-bold text-white dark:text-gray-100">
+  Delivering Premium<br /><span className="text-[#FFFFFF] md:mb-3 md:mt-3  roboto ">   Dairy to Restaurants
+   </span>
+
   </h1>
   <p className="text-base md:text-xl mt-3 text-white dark:text-gray-300">
   Supplying premium cheese, butter, and ghee that demand quality and flavor.
@@ -108,55 +128,40 @@ const Banner = () => {
 
 </div>
 
-<div className="flex flex-row">
+<div className="flex flex-row ">
         {/* Burger Animation Section */}
-        <div className="burger-container   relative w-[400px] h-[300px] md:w-[600px] md:h-[500px]  md:mt-10 flex justify-center mr-5">
+        <div className="burger-container   relative w-[400px] h-[300px] md:w-[600px] md:h-[500px]   flex justify-center mr-5">
   {/* Bottom Bun */}
-  <div></div>
-  <Image
-    src="/images/layer-4.png"
-    alt="Bottom Bun"
-    className="layer layer-4 absolute top-[240px]"
-    layout="intrinsic"
-    width={270}
-    height={50}
-    priority
-  />
-
-  {/* Patty */}
-  <Image
-    src="/images/layer-3.png"
-    alt="Patty"
-    className="layer layer-3 absolute top-[200px]"
-    layout="intrinsic"
-    width={250}
-    height={50}
-    priority
-  />
-
-  {/* Lettuce */}
-  <Image
-    src="/images/layer-2.png"
-    alt="Lettuce"
-    className="layer layer-2 absolute top-[150px]"
-    layout="intrinsic"
-    width={300}
-    height={50}
-    priority
-  />
-
-  {/* Top Bun */}
-  <Image
-    src="/images/layer-1.png"
-    alt="Top Bun"
-    className="layer layer-1 absolute top-[100px]"
-    layout="intrinsic"
-    width={300}
-    height={50}
-    priority
-  />
  
-  <div className="seal offer-seal absolute top-[80px] left-[60px] md:left-[80px] w-[100px] h-[100px] md:w-[120px] md:h-[120px] bg-[#E22626] rounded-full flex items-center justify-center shadow-lg transform rotate-[-15deg]">
+ 
+  <Image
+    src="/cheeseSlice.png"
+    alt="Cheese Slice"
+    className=" cheese-slice absolute top-[120px] z-20"
+    layout="intrinsic"
+    width={350}
+    height={50}
+    priority
+  />
+ <Image
+    src="/splash-1.png"
+    alt="Splash"
+    className="slash absolute top-[90px] z-10"
+    layout="intrinsic"
+    width={450}
+    height={50}
+    priority
+  /> <Image
+  src="/splash2.png"
+  alt="Splash"
+  className="slash-2 absolute top-[80px] "
+  layout="intrinsic"
+  width={460}
+  height={50}
+  priority
+/>
+
+  {/* <div className="seal offer-seal absolute top-[80px] left-[60px] md:left-[80px] w-[100px] h-[100px] md:w-[120px] md:h-[120px] bg-[#E22626] rounded-full flex items-center justify-center shadow-lg transform rotate-[-15deg]">
   
   <svg
     className="absolute w-[120px] h-[120px] md:w-[150px] md:h-[150px]"
@@ -186,15 +191,15 @@ const Banner = () => {
   on Spicy Delight Burger!
 </span>
 
-    </div>
+    </div> */}
 
 
   {/* card */}
    {/* Cards - Positioned on the right side */}
  
 </div>
-<div className="nutrition pl-4 card  absolute right-0 mt-24 flex flex-col gap-6 md:gap-3 items-center">
-    <div className="calories card-1 bg-white p-2 rounded-l-lg  text-center w-[120px] md:w-[150px] transform transition-transform duration-300 hover:scale-105">
+<div className="nutrition pl-4  absolute right-0 mt-28 flex flex-col gap-6 md:gap-3 items-center">
+    <div className="calories card bg-white p-2 rounded-l-lg  text-center w-[120px] md:w-[150px] transform transition-transform duration-300 hover:scale-105">
       <h3 className="text-lg font-semibold text-gray-700">Calories</h3>
       <small className="block text-sm text-gray-500">Kcal</small>
       <span className="block text-2xl font-bold text-[#E22626] mt-2">1370</span>

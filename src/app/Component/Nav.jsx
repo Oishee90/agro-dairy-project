@@ -63,7 +63,7 @@ const Navbar = () => {
         
         />
            <div className="flex flex-col items-start"> 
-            <a href="#" className="   md:text-3xl text-2xl text-black font-extrabold flex">
+            <a href="#" className="   md:text-3xl text-2xl text-[#FB9300] font-extrabold flex">
            
             {/* Wrap each letter in a span */}
             {["S","o","u","r","o","v","A","g","r","o"].map((letter, index) => (
@@ -73,7 +73,7 @@ const Navbar = () => {
             ))}
           
           </a>
-          <span className="text-[12px] w-[100%]  tracking-[9px] text-[#000000e0] text-center">Dairy & Poultry</span></div>
+          <span className="text-[12px] w-[100%]  tracking-[9px] text-[#FB9300] text-center">Dairy & Poultry</span></div>
           </div>
               {/* Mobile menu button */}
               <div className="flex lg:hidden">
@@ -124,28 +124,28 @@ const Navbar = () => {
                 isOpen ? "translate-x-0 opacity-100" : "opacity-0 -translate-x-full"
               }`}
             >
-              <div className="flex flex-col text-xl font-medium md:flex-row md:mx-6">
+              <div className="flex flex-col roboto text-base font-medium md:flex-row md:mx-6">
                 <a
                   href="#"
-                  className="my-2 text-[#3f3f3f] transition-colors duration-300 transform dark:text-gray-200 hover:text-black dark:hover:text-green-400 md:mx-4 md:my-0"
+                  className=" text-green-600 transition-colors duration-300 transform dark:text-gray-200  hover:text-green-400 md:mx-4 md:my-0"
                 >
                   Home
                 </a>
                 <a
                   href="#"
-                  className="my-2 text-xl  text-[#3f3f3f]   transition-colors duration-300 transform dark:text-gray-200 hover:text-black dark:hover:text-green-400 md:mx-4 md:my-0"
+                  className="roboto text-base font-medium  text-green-600  transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
                 >
                  Products
                 </a>
                 <a
                   href="#"
-                  className="my-2 text-[#3f3f3f]   transition-colors duration-300 transform dark:text-gray-200 hover:text-black dark:hover:text-green-400 md:mx-4 md:my-0"
+                  className="my-2 text-green-600   transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
                 >
                  About us
                 </a>
                 <a
                   href="#"
-                  className="my-2 text-[#3f3f3f]  transition-colors duration-300 transform dark:text-gray-200 hover:text-black dark:hover:text-green-400 md:mx-4 md:my-0"
+                  className="my-2 text-green-600  transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
                 >
                  Contact us
                 </a>
