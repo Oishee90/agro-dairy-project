@@ -1,13 +1,33 @@
+"use client"
+import { useState, useEffect } from "react";
 import Banner from "./Component/Banner";
+import Loader from "./Component/Loader";
 import Nav from "./Component/Nav";
+import "../app/globals.css";
 
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // লোডিং বন্ধ করুন
+    }, 2000);
+
+    return () => clearTimeout(timer); // টায়মার ক্লিনআপ
+  }, []);
+
   return (
-    <div className="container mx-auto ">
-    <Nav></Nav>
-    <Banner></Banner>
-  
-  </div>
+    <div className="">
+        
+      {isLoading ? (
+        <Loader /> // লোডিং কম্পোনেন্ট দেখান
+      ) : (
+        <>
+         <Nav />
+        <Banner /> 
+        </>
+      )}
+    </div>
   );
 }
