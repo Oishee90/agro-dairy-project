@@ -26,7 +26,9 @@ const Navbar = () => {
           "backdrop-blur-md",
           "border-b",
           "border-gray-200",
-          "shadow-sm"
+          "shadow-sm",
+         
+
         );
         navbar.classList.remove("bg-transparent");
       } else {
@@ -35,7 +37,8 @@ const Navbar = () => {
           "backdrop-blur-md",
           "border-b",
           "border-gray-200",
-          "shadow-sm"
+          "shadow-sm",
+         
         );
         navbar.classList.add("bg-transparent");
       }
@@ -71,7 +74,7 @@ const Navbar = () => {
                 </span>
               ))}
             </a>
-            <span className="text-[12px] w-full tracking-[5px] md:tracking-[9px] text-[#83B844] text-center">Dairy & Poultryx</span>
+            <span className="text-[12px] w-full tracking-[5px] md:tracking-[9px] text-[#83B844] text-center">Dairy & Poultry</span>
           </div>
         </div>
   
@@ -86,7 +89,7 @@ const Navbar = () => {
             {isOpen ? (
               <CiCircleRemove className="w-8 h-8 font-bold text-green-400" />
             ) : (
-              <CiMenuFries className="w-8 h-8 font-bold text-green-400" />
+              <CiMenuFries className="w-6 h-8 font-bold text-green-400" />
             )}
           </button>
         </div>
@@ -94,10 +97,9 @@ const Navbar = () => {
   
       {/* Mobile Menu */}
       <div
-        className={`w-full min-h-screen md:min-h-0  z-20 pt-10 pb-10 md:pt-0 md:pb-0 transition-all duration-300 ease-in-out bg-black/60 backdrop-blur-md md:backdrop-blur-none dark:bg-gray-800 md:mt-[30px] lg:mt-[40px] md:p-0 md:top-0 md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex items-center ${
-          isOpen ? "translate-x-0 opacity-100" : "opacity-0 -translate-x-full -translate-y-full"
-        }`}
-      >
+              className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-black/30 backdrop-blur-md dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${
+                isOpen ? "translate-x-0 opacity-100 fixed md:min-h-0 min-h-screen backdrop-blur-md bg-black/30  " : "opacity-0 -translate-x-full "
+              }`}      >
         <div className="flex flex-col justify-center gap-7   md:gap-0 items-center px-2 py-2 md:py-0 roboto text-xl  md:text-base font-medium md:flex-row md:mx-6">
           <a
             href="#"
