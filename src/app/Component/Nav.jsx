@@ -97,31 +97,31 @@ const Navbar = () => {
   
       {/* Mobile Menu */}
       <div
-              className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-black/30 backdrop-blur-md dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${
+              className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out text-white md:text-[#83B844] dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${
                 isOpen ? "translate-x-0 opacity-100 fixed md:min-h-0 min-h-screen backdrop-blur-md bg-black/30  " : "opacity-0 -translate-x-full "
               }`}      >
-        <div className="flex flex-col justify-center gap-7   md:gap-0 items-center px-2 py-2 md:py-0 roboto text-xl  md:text-base font-medium md:flex-row md:mx-6">
+        <div className="flex flex-col justify-center gap-7   md:gap-0 items-center px-2 py-2 md:py-0 roboto text-2xl  md:text-base font-medium md:flex-row md:mx-6">
           <a
             href="#"
-            className="text-[#83B844]  transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
+            className="mt-8 md:mt-0  transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
           >
             Home
           </a>
           <a
             href="#"
-            className="text-[#83B844] transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
+            className=" transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
           >
             Product
           </a>
           <a
             href="#"
-            className="text-[#83B844] transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
+            className=" transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
           >
             About
           </a>
           <a
             href="#"
-            className="text-[#83B844] transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
+            className=" transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
           >
             Contact
           </a>
