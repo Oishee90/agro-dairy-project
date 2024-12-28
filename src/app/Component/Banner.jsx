@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
-import { LiaShippingFastSolid } from "react-icons/lia";
+import { MdOutgoingMail } from "react-icons/md";
 
 const Banner = () => {
   useEffect(() => {
@@ -32,25 +32,10 @@ const Banner = () => {
     timeline.fromTo(
       ".content",
       { x: -300, opacity: 0 }, // Start off-screen to the left
-      { x: 0, opacity: 1, duration: 1, ease: "power2.out" } // Animate to visible position
+      { x: 0, opacity: 1, duration: 1,delay:0.5, ease: "power2.out" } // Animate to visible position
     );
   
-    timeline.fromTo(
-      ".card",
-      { x: 300, opacity: 0 }, // Start off-screen to the left
-      { x: 0, opacity: 1, duration: 1, ease: "power2.out" } // Animate to visible position
-    );
-    timeline.fromTo(
-      ".card-2",
-      { x: 300, opacity: 0 }, // Start off-screen to the left
-      { x: 0, opacity: 1, duration: 1, delay: 0.2, ease: "power2.out" } // Animate to visible position
-    );
-    timeline.fromTo(
-      ".card-3",
-      { x: 300, opacity: 0 }, // Start off-screen to the left
-      { x: 0, opacity: 1, duration: 1, delay: 0.2, ease: "power2.out" } // Animate to visible position
-    );
-
+  
     timeline.to(".burger-container", { y: 20, repeat: -1, yoyo: true, duration: 1 }); // Floating effect
   }, []);
 
@@ -63,7 +48,7 @@ const Banner = () => {
         y: 0,
         opacity: 1,
         duration: 1,
-        delay: 1,
+        delay: 2,
         ease: "power2.out",
       }
     );
@@ -74,7 +59,7 @@ const Banner = () => {
         scale: 1, // Zoom to full size
         opacity: 1, // Make it visible
         duration: 1,
-        delay: 1.1, // Delay to make it appear after the cheese slice animation
+        delay: 2.1, // Delay to make it appear after the cheese slice animation
         ease: "power2.out",
       }
     );
@@ -87,6 +72,7 @@ const Banner = () => {
         y: 0,
         opacity: 1,
         duration: 1,
+        delay: 1.5,
         ease: "power2.out",
       }
     );
@@ -116,11 +102,11 @@ const Banner = () => {
           {/* Button */}
           <div className="mt-6 mb-2 md:mt-8 cursor-pointer">
             <button className="relative px-2 py-2 border-2  text-lg border-r-4 border-b-4 border-[#d9ae4a] border-b-white border-r-white rounded-lg bg-none text-white overflow-hidden group transform transition-all duration-500 ease-out hover:translate-x-4 hover:translate-y-2">
-              <span className="relative z-10 flex items-center gap-2">
+              <span className="relative z-10 flex items-center gap-1">
                 <div className="">
-                  <LiaShippingFastSolid className="text-inherit font-medium w-[24px] h-[18px]" />
+                  <MdOutgoingMail  className="text-inherit font-medium w-[24px] h-[18px]" />
                 </div>
-               Explore Now 
+               Contact Us
               </span>
               {/* Color fill from bottom-left corner */}
               <span className="absolute inset-0 bg-[#d9ae4a] transform scale-x-0 scale-y-0 origin-bottom-left group-hover:scale-x-100 group-hover:scale-y-100 transition-transform duration-500 ease-out"></span>
