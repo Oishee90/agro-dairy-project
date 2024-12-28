@@ -103,13 +103,13 @@ const Banner = () => {
       <div className="h-[600px] px-2  md:h-[600px] flex flex-col-reverse md:flex-row justify-between items-center lg:items-start">
         {/* Content Section */}
         <div className="content w-full text-center md:text-left md:w-1/2 px-6 mt-36 mb-5 banner-content opacity-0">
-          <h1 className="text-2xl w-full md:text-5xl font-bold text-white dark:text-gray-100 lg:mt-8">
+          <h1 className="text-2xl roboto w-full md:text-5xl font-bold text-white dark:text-gray-100 lg:mt-8">
             Delivering Premium<br />
-            <span className="text-[#FFFFFF] md:mb-3 md:mt-3 roboto">
+            <span className="text-[#FFFFFF]  md:mb-3 md:mt-3 roboto">
               Dairy to Restaurants
             </span>
           </h1>
-          <p className="text-base md:text-lg lg:mt-6 mt-3 text-gray-300 dark:text-gray-300">
+          <p className="text-base md:text-lg roboto lg:mt-6 mt-3 text-gray-300 dark:text-gray-300">
             Supplying premium cheese, butter, and ghee that demand quality and flavor.
           </p>
 

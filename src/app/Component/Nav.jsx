@@ -71,7 +71,7 @@ const Navbar = () => {
                 </span>
               ))}
             </a>
-            <span className="text-[12px] w-full tracking-[5px] md:tracking-[9px] text-[#83B844] text-center">Dairy & Poultry</span>
+            <span className="text-[12px] w-full tracking-[5px] md:tracking-[9px] text-[#83B844] text-center">Dairy & Poultryx</span>
           </div>
         </div>
   
