@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { CiMenuFries, CiCircleRemove } from "react-icons/ci";
+import Link from "next/link";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
@@ -101,30 +102,30 @@ const Navbar = () => {
                 isOpen ? "translate-x-0 opacity-100 fixed md:min-h-0 min-h-screen backdrop-blur-md bg-black/30  " : "opacity-0 -translate-x-full "
               }`}      >
         <div className="flex flex-col justify-center gap-7   md:gap-0 items-center px-2 py-2 md:py-0 roboto text-2xl  md:text-base font-medium md:flex-row md:mx-6">
-          <a
-            href="#"
-            className="mt-8 md:mt-0  transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className=" transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
-          >
-            Product
-          </a>
-          <a
-            href="#"
-            className=" transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
-          >
-            About
-          </a>
-          <a
-            href="#"
-            className=" transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
-          >
-            Contact
-          </a>
+        <Link
+              href="/"
+              className="transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
+            >
+              Home
+            </Link>
+          <Link
+              href="/product"
+              className="transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
+            >
+              Product
+            </Link>
+          <Link
+              href="/about"
+              className="transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className="transition-colors duration-300 transform dark:text-gray-200 hover:text-green-400 dark:hover:text-green-400 md:mx-4 md:my-0"
+            >
+              Contact
+            </Link>
         </div>
       </div>
     </div>

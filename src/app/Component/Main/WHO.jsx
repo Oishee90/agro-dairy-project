@@ -23,7 +23,7 @@ const WHO = () => {
     }, [images.length]);
 
     return (
-        <div className="bg-white h-full w-full relative">
+        <div className="bg-white h-full w-full relative ">
             {/* Symbol */}
             <Image
                 src="/cowSymbol.png"
@@ -36,7 +36,7 @@ const WHO = () => {
             {/* Content */}
             <div className="bg-white h-full w-full flex md:flex-row flex-col md:items-start items-center justify-center py-20">
                 {/* Text Section */}
-                <div className="w-full md:w-1/2 px-6">
+                <div className="w-full md:w-1/2 px-2 md:px-6">
                     <h1 className="md:text-7xl text-3xl font-extrabold playfair-display text-[#d9ae4a]">
                         Who We Are
                     </h1>
@@ -47,7 +47,7 @@ const WHO = () => {
 
                 {/* Image Section */}
                 <div className="w-full md:w-1/2 flex items-center justify-around relative  ">
-                    <div className="relative flex items-center justify-center w-[300px] h-[300px] mt-20">
+                    <div className="relative flex items-center justify-center w-[200px] md:w-[300px] h-[300px] mt-20">
                         {images.map((image, index) => (
                             <div
                                 key={index}
@@ -63,6 +63,7 @@ const WHO = () => {
                                     alt={image.alt}
                                     layout="fill"
                                     objectFit="cover"
+                                
                                 />
                             </div>
                         ))}

@@ -52,21 +52,21 @@ const BestProduct = () => {
         spacing: 16,
       },
       breakpoints: {
-        "(min-width: 640px)": {
+        "(max-width: 639px)": { // Small devices
           slides: {
             origin: "center",
-            perView: 1.5,
+            perView: 1,
             spacing: 16,
           },
         },
-        "(min-width: 768px)": {
+        "(min-width: 640px) and (max-width: 767px)": { // Medium devices
           slides: {
             origin: "center",
-            perView: 1.75,
+            perView: 1,
             spacing: 16,
           },
         },
-        "(min-width: 1024px)": {
+        "(min-width: 768px)": { // Larger devices
           slides: {
             origin: "center",
             perView: 3,
@@ -87,13 +87,22 @@ const BestProduct = () => {
         keenSliderActive.current.innerText = sliderInstance.track.details.rel + 1;
       },
     });
-
+  
     setSlider(keenSliderInstance);
-
+  
+    const handleResize = () => {
+      keenSliderInstance.update();
+    };
+  
+    window.addEventListener("resize", handleResize);
+  
     return () => {
       keenSliderInstance.destroy();
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
+  
+  
   const updateSlideStyles = (sliderInstance) => {
     sliderInstance.slides.forEach((slide, index) => {
       slide.classList.remove(
@@ -175,7 +184,7 @@ const BestProduct = () => {
             <Image
               src={slide.image}
               alt={slide.alt}
-              width={500}
+              width={700}
               height={500}
               className="transition-all duration-500"
             />
