@@ -5,6 +5,7 @@ import Loader from "./Component/Loader";
 import Nav from "./Component/Nav";
 import "../app/globals.css";
 import WHO from "./Component/Main/WHO";
+import BestProduct from "./Component/Main/BestProduct";
 
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
          <Nav />
         <Banner />
         <WHO></WHO> 
+        <BestProduct></BestProduct>
         </>
       )}
     </div>
