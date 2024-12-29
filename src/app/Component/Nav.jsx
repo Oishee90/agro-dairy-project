@@ -8,7 +8,7 @@ const Navbar = () => {
   useEffect(() => {
     // GSAP color transition animation
     gsap.to(".animated-word", {
-      color: "#83B844", // Target color
+      color: "#FB9300", // Target color
       stagger: 0.2, // Delay between each letter
       duration: 1.5, // Duration of the color change
       repeat: -1, // Infinite loop
@@ -66,7 +66,7 @@ const Navbar = () => {
             height={30} // Adjust height
           />
           <div className="flex flex-col items-start md:items-center"> 
-            <a href="#" className="md:text-3xl text-xl text-[#FB9300] font-extrabold flex">
+            <a href="#" className="md:text-3xl text-xl text-white font-extrabold flex">
               {/* Wrap each letter in a span */}
               {["S", "o", "u", "r", "o", "v", "A", "g", "r", "o"].map((letter, index) => (
                 <span key={index} className="animated-word mr-1">
@@ -74,7 +74,7 @@ const Navbar = () => {
                 </span>
               ))}
             </a>
-            <span className="text-[12px] w-full tracking-[5px] md:tracking-[9px] text-[#83B844] text-center">Dairy & Poultry</span>
+            <span className="text-[12px] w-full tracking-[5px] md:tracking-[9px] text-white text-center">Dairy & Poultry</span>
           </div>
         </div>
   
@@ -97,7 +97,7 @@ const Navbar = () => {
   
       {/* Mobile Menu */}
       <div
-              className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out text-white md:text-[#83B844] dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${
+              className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out text-white md:text-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${
                 isOpen ? "translate-x-0 opacity-100 fixed md:min-h-0 min-h-screen backdrop-blur-md bg-black/30  " : "opacity-0 -translate-x-full "
               }`}      >
         <div className="flex flex-col justify-center gap-7   md:gap-0 items-center px-2 py-2 md:py-0 roboto text-2xl  md:text-base font-medium md:flex-row md:mx-6">

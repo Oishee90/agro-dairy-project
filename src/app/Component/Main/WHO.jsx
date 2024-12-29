@@ -6,17 +6,18 @@ const WHO = () => {
 
     const images = [
         { src: "/worker.jpg", alt: "Image 1" },
-        { src: "/cow.jpg", alt: "Image 2" },
+        { src: "/Paultry.jpg", alt: "Image 2" },
     
         { src: "/dairyProduct.webp", alt: "Image 3" },
-        { src: "/Paultry.jpg", alt: "Image 4" },
+       
+        { src: "/cow.jpg", alt: "Image 4" },
     ];
 
     // Auto rotate logic
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 500); // Change image every 3 seconds
+        }, 700); // Change image every 3 seconds
 
         return () => clearInterval(interval); // Cleanup interval on unmount
     }, [images.length]);
@@ -33,24 +34,24 @@ const WHO = () => {
             />
 
             {/* Content */}
-            <div className="bg-white h-full w-full flex items-start justify-center py-20">
+            <div className="bg-white h-full w-full flex md:flex-row flex-col md:items-start items-center justify-center py-20">
                 {/* Text Section */}
-                <div className="w-1/2 px-10">
-                    <h1 className="md:text-6xl text-3xl font-extrabold text-black">
+                <div className="w-full md:w-1/2 px-6">
+                    <h1 className="md:text-7xl text-3xl font-extrabold playfair-display text-[#d9ae4a]">
                         Who We Are
                     </h1>
-                    <p className="mt-5 text-black text-lg">
+                    <p className="mt-8 text-[#000000a3] text-xl roboto">
                     At Sourav Agro Dairy and Poultry, we specialize in crafting premium dairy products like cheese, butter, and ghee, tailored to meet the unique needs of restaurants. With a commitment to quality and excellence, we ensure every product is made from the finest ingredients, delivering unmatched taste and consistency. Our mission is to empower culinary professionals with products they can trust, backed by ethical practices and a passion for perfection.
                     </p>
                 </div>
 
                 {/* Image Section */}
-                <div className="w-1/2 flex items-center justify-around relative  ">
+                <div className="w-full md:w-1/2 flex items-center justify-around relative  ">
                     <div className="relative flex items-center justify-center w-[300px] h-[300px] mt-20">
                         {images.map((image, index) => (
                             <div
                                 key={index}
-                                className={`absolute w-24 h-32 md:w-52 md:h-32 rounded-lg overflow-hidden cursor-pointer transition-opacity duration-500 ${
+                                className={`absolute w-1/2 h-32 md:w-52 md:h-32 rounded-lg overflow-hidden cursor-pointer transition-opacity duration-500 ${
                                     activeIndex === index ? "opacity-100 scale-110" : "opacity-50"
                                 }`}
                                 style={{
