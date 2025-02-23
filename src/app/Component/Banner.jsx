@@ -80,27 +80,25 @@ const Banner = () => {
 
   return (
     <div
-      className="relative bg-cover bg-center h-[650px] md:h-[600px] "
+      className="relative bg-cover bg-center h-[650px] md:h-[800px] "
       style={{
         backgroundImage: "url('/home-hero-banner.webp')", // Replace 'your-image-path.jpg' with the actual image path
       }}
     >
       {/* Banner Section with Yellow Background */}
-      <div className="h-[600px] px-2  md:h-[600px] flex flex-col-reverse md:flex-row justify-between items-center lg:items-start">
+      <div className="container mx-auto h-[600px] px-2 pt-4 md:pt-20 md:h-[800px] flex flex-col-reverse md:flex-row justify-between items-center lg:items-start">
         {/* Content Section */}
         <div className="content w-full text-center md:text-left md:w-1/2 px-6 mt-36 mb-5 banner-content opacity-0">
-          <h1 className="text-[1.5rem] leading-[135%] mt-4 playfair-display w-full md:text-[3rem] font-bold text-[#d9ae4a] dark:text-gray-100 lg:mt-8">
+          <h1 className="text-3xl leading-[135%] mt-4 playfair-display w-full md:text-[3rem] lg:text-[4rem] font-bold text-[#d9ae4a] dark:text-gray-100 lg:mt-8">
             Delivering Premium<br />
-          
               Dairy to Restaurants
-          
           </h1>
-          <p className="text-base roboto md:mt-6 mt-4 text-[#e5e7eb9e] dark:text-gray-300">
+          <p className="text-[14px] leading-[20px] md:text-[1.1rem] md:leading-[135%] md:mt-6 mt-4 text-[#ffeab8fc] dark:text-gray-300">
             Supplying premium cheese, butter, and ghee that demand quality and flavor.
           </p>
 
           {/* Button */}
-          <div className="mt-6 mb-2 md:mt-8 cursor-pointer">
+          <div className="mt-6 mb-2 md:mt-12 cursor-pointer">
             <button className="relative px-2 py-2 border-2  text-lg border-r-4 border-b-4 border-[#d9ae4a] border-b-white border-r-white rounded-lg bg-none text-white overflow-hidden group transform transition-all duration-500 ease-out hover:translate-x-4 hover:translate-y-2">
               <span className="relative z-10 flex items-center gap-1">
                 <div className="">

@@ -44,35 +44,21 @@ const BestProduct = () => {
     const keenSliderInstance = new KeenSlider(keenSliderRef.current, {
       loop: true,
       defaultAnimation: {
-        duration: 750,
+        duration: 500,
       },
       slides: {
         origin: "center",
         perView: 3,
-        spacing: 16,
+        spacing: 20,
       },
       breakpoints: {
-        "(max-width: 639px)": { // Small devices
+        "(max-width: 767px)": { // Small devices
           slides: {
             origin: "center",
             perView: 1,
-            spacing: 16,
+            spacing: 20,
           },
-        },
-        "(min-width: 640px) and (max-width: 767px)": { // Medium devices
-          slides: {
-            origin: "center",
-            perView: 1,
-            spacing: 16,
-          },
-        },
-        "(min-width: 768px)": { // Larger devices
-          slides: {
-            origin: "center",
-            perView: 3,
-            spacing: 16,
-          },
-        },
+        }
       },
       created(sliderInstance) {
         updateSlideStyles(sliderInstance);
@@ -153,14 +139,14 @@ const BestProduct = () => {
 
 
   return (
-    <div className="lg:py-20  py-10">
+    <div className="container mx-auto pt-20">
       <section className="bg-white relative">
-        <div className="mx-auto w-full px-6 py-12 sm:px-6  lg:py-16">
+        <div className="mx-auto w-full mt-4 px-4 md:px-6">
           <div className="flex lg:flex-row flex-col justify-between items-center mb-9">
-          <div><h2 className="text-center text-4xl playfair-display font-bold tracking-tight text-[#d9ae4a] sm:text-5xl md:text-7xl">
-         Our <span className="text-green-700">Best  </span> Product
+          <div><h2 className="text-center text-3xl font-bold md:text-5xl">
+         Our <span className="text-green-700">Best  </span> Products
           </h2>
-          <p className="mt-6 mb-4 text-xl roboto text-[#000000a3] text-center md:text0left">Ghee, butter, and cheese – pure quality for you.
+          <p className="mb-8 mt-4 text-center md:text-left text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16">Ghee, butter, and cheese – pure quality for you.
 </p>
           </div>
  <div><button className="relative px-2 py-2 lg:px-4 lg:py-3  border-2 border-transparent rounded-lg border-r-4 border-b-4 border-r-black border-b-black bg-none text-black font-bold border-t-[#d9ae4a] border-l-[#d9ae4a] hover:text-white overflow-hidden group transform transition-all duration-500 ease-out hover:translate-x-4 hover:translate-y-2">
@@ -184,7 +170,7 @@ const BestProduct = () => {
             <Image
               src={slide.image}
               alt={slide.alt}
-              width={700}
+              width={500}
               height={500}
               className="transition-all duration-500"
             />

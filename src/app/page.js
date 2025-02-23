@@ -6,6 +6,9 @@ import Nav from "./Component/Nav";
 import "../app/globals.css";
 import WHO from "./Component/Main/WHO";
 import BestProduct from "./Component/Main/BestProduct";
+import FeaturesSection from "./Component/Main/FeaturesSection";
+import Footer from "./Component/Footer";
+import Contact from "./Component/Main/Contact";
 
 
 export default function Home() {
@@ -13,23 +16,26 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false); // লোডিং বন্ধ করুন
+      setIsLoading(false); 
     }, 2000);
 
-    return () => clearTimeout(timer); // টায়মার ক্লিনআপ
+    return () => clearTimeout(timer); 
   }, []);
 
   return (
     <div className="">
         
       {isLoading ? (
-        <Loader /> // লোডিং কম্পোনেন্ট দেখান
+        <Loader /> 
       ) : (
         <>
          <Nav />
         <Banner />
         <WHO></WHO> 
         <BestProduct></BestProduct>
+        <FeaturesSection></FeaturesSection>
+        <Contact></Contact>
+        <Footer></Footer>
         </>
       )}
     </div>
