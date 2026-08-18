@@ -17,7 +17,7 @@ The website allows customers to explore the company's products and information. 
 
 ## Technologies Used
 
-- **Frontend**: Next.js, React.js
+- **Frontend**: Next.js
 - **Styling**: Tailwind CSS
 - **Animations**: GSAP
 - **Routing**: Next.js Routing
