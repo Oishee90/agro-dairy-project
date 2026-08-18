@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sourav Agro Dairy & Poultry
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Sourav Agro Dairy & Poultry is a modern product showcase website developed for a dairy business specializing in premium products such as cheese, butter, and ghee.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The website allows customers to explore the company's products and information. Customers interested in purchasing products or getting more information can send an inquiry through the website, which is delivered directly to the business email.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Product Showcase**: Displays premium dairy products including cheese, butter, and ghee.
+- **Customer Inquiry**: Customers can send purchase or information requests.
+- **Email Integration**: Customer inquiries are delivered directly to the business email.
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
+- **GSAP Animations**: Smooth and engaging animations for a better user experience.
+- **Next.js Routing**: Structured and efficient page navigation.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- **Frontend**: Next.js, React.js
+- **Styling**: Tailwind CSS
+- **Animations**: GSAP
+- **Routing**: Next.js Routing
+- **Email**: Email Integration
 
-To learn more about Next.js, take a look at the following resources:
+## Company
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+At Sourav Agro Dairy & Poultry, we specialize in premium dairy products such as cheese, butter, and ghee, made with quality ingredients and a commitment to consistency, excellence, and customer satisfaction.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Screenshots
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img width="1917" height="903" alt="Sourav Agro Dairy & Poultry Website" src="https://github.com/user-attachments/assets/c5f60a95-8c33-4d19-bfd0-6048768fc4b9" />
