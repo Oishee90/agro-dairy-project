@@ -29,4 +29,4 @@ At Sourav Agro Dairy & Poultry, we specialize in premium dairy products such as 
 
 ## Screenshots
 
-<img width="1917" height="903" alt="Sourav Agro Dairy & Poultry Website" src="https://github.com/user-attachments/assets/c5f60a95-8c33-4d19-bfd0-6048768fc4b9" />
+<img width="1920" height="4165" alt="screencapture-agro-dairy-project-vercel-app-2026-08-18-10_09_01" src="https://github.com/user-attachments/assets/6895450b-3512-4121-8667-bb5d73f444ff" />
